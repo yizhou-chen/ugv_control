@@ -24,7 +24,7 @@ def create_marker_msg():
     m.color.g = 1.0
     m.color.b = 0.0
 
-    # trajectory
+    # trajectory specs
     z = 0.55
     L = 1.0
     mu = 0.1
