@@ -24,21 +24,42 @@ def create_marker_msg():
     m.color.g = 1.0
     m.color.b = 0.0
 
-    # trajectory specs
+    # trajectory
     z = 0.55
     L = 1.0
     mu = 0.1
 
     N = 1000
     t = np.linspace(0.0, 100.0, N)
+    # #'8'
+    # L=1
+    # mu=0.1
+    # for i in range(N):
+    #     ref_x = L*math.cos(mu*t[i])
+    #     ref_y = 2*L*math.sin(mu*t[i])*math.cos(mu*t[i])
+    #     m.points.append(Point(ref_x, ref_y, z))
 
+    # return m
+
+    # #sinusoid
+    # for i in range(N):
+    #     ref_x = 0.05*t[i]
+    #     ref_y = 0.5*math.sin(5*ref_x)
+
+    #     m.points.append(Point(ref_x, ref_y, z))
+
+    # return m
+
+    #straight line
+    L=1
+    mu=0.1
     for i in range(N):
-        ref_x = L*math.cos(mu*t[i])
-        ref_y = 2*L*math.sin(mu*t[i])*math.cos(mu*t[i])
-
+        ref_x = 0.1*t[i]
+        ref_y = 0.2*t[i]
         m.points.append(Point(ref_x, ref_y, z))
 
     return m
+
 
 def main():
     rospy.init_node('reference_traj_publiser', anonymous=True)

@@ -61,22 +61,22 @@ class UGVControl:
         # x_2dot = -1 * math.cos(t)
         # y_2dot = -1 * math.sin(t)
 
-        #straightline
-        # ref_x = 0.01*t
-        # ref_y = 0.02*t
+        # straightline
+        ref_x = 0.05*t
+        ref_y = 0.1*t
 
-        # x_dot = 0.01
-        # y_dot = 0.02
-        # x_2dot = 0
-        # y_2dot = 0
+        x_dot = 0.05
+        y_dot = 0.1
+        x_2dot = 0
+        y_2dot = 0
 
         #sin
-        ref_x = 0.01*t
-        ref_y = 0.5*math.sin(ref_x)
-        x_dot = 0.05
-        y_dot = 0.5*x_dot*math.cos(ref_x)
-        x_2dot = 0
-        y_2dot = -0.5*x_dot*x_dot*math.sin(ref_x)
+        # ref_x = 0.05*t
+        # ref_y = 0.5*math.sin(5*ref_x)
+        # x_dot = 0.05
+        # y_dot = 0.5*5*x_dot*math.cos(5*ref_x)
+        # x_2dot = 0
+        # y_2dot = -0.5*5*5*x_dot*x_dot*math.sin(5*ref_x)
 
         # '8'
         # L=1
