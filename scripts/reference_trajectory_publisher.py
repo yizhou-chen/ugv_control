@@ -31,15 +31,15 @@ def create_marker_msg():
 
     N = 1000
     t = np.linspace(0.0, 100.0, N)
-    # #'8'
-    # L=1
-    # mu=0.1
-    # for i in range(N):
-    #     ref_x = L*math.cos(mu*t[i])
-    #     ref_y = 2*L*math.sin(mu*t[i])*math.cos(mu*t[i])
-    #     m.points.append(Point(ref_x, ref_y, z))
+    #'8'
+    L=1
+    mu=0.1
+    for i in range(N):
+        ref_x = L*math.cos(mu*t[i])
+        ref_y = 2*L*math.sin(mu*t[i])*math.cos(mu*t[i])
+        m.points.append(Point(ref_x, ref_y, z))
 
-    # return m
+    return m
 
     # #sinusoid
     # for i in range(N):
@@ -51,14 +51,14 @@ def create_marker_msg():
     # return m
 
     #straight line
-    L=1
-    mu=0.1
-    for i in range(N):
-        ref_x = 0.1*t[i]
-        ref_y = 0.2*t[i]
-        m.points.append(Point(ref_x, ref_y, z))
+    # L=1
+    # mu=0.1
+    # for i in range(N):
+    #     ref_x = 0.1*t[i]
+    #     ref_y = 0.2*t[i]
+    #     m.points.append(Point(ref_x, ref_y, z))
 
-    return m
+    # return m
 
 
 def main():

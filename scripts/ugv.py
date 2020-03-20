@@ -62,13 +62,13 @@ class UGVControl:
         # y_2dot = -1 * math.sin(t)
 
         # straightline
-        ref_x = 0.05*t
-        ref_y = 0.1*t
+        # ref_x = 0.05*t
+        # ref_y = 0.1*t
 
-        x_dot = 0.05
-        y_dot = 0.1
-        x_2dot = 0
-        y_2dot = 0
+        # x_dot = 0.05
+        # y_dot = 0.1
+        # x_2dot = 0
+        # y_2dot = 0
 
         #sin
         # ref_x = 0.05*t
@@ -79,17 +79,17 @@ class UGVControl:
         # y_2dot = -0.5*5*5*x_dot*x_dot*math.sin(5*ref_x)
 
         # '8'
-        # L=1
-        # mu=0.1
-        # ref_x = L*math.cos(mu*t)
-        # ref_y = 2*L*math.sin(mu*t)*math.cos(mu*t)
-        # x_dot = -mu*L*math.sin(mu*t)
-        # y_dot = 2*mu*L*(math.cos(mu*t)*math.cos(mu*t)-math.sin(mu*t)*math.sin(mu*t))
-        # x_2dot = -math.pow(mu,2)*L*math.cos(mu*t)
-        # y_2dot = -8*L*math.pow(mu,2)*math.sin(mu*t)*math.cos(mu*t)
-        # print('ref_x=%f'%(ref_x))
-        # print('ref_y=%f'%(ref_y))
-        # print('t=%f'%(t))
+        L=1
+        mu=0.1
+        ref_x = L*math.cos(mu*t)
+        ref_y = 2*L*math.sin(mu*t)*math.cos(mu*t)
+        x_dot = -mu*L*math.sin(mu*t)
+        y_dot = 2*mu*L*(math.cos(mu*t)*math.cos(mu*t)-math.sin(mu*t)*math.sin(mu*t))
+        x_2dot = -math.pow(mu,2)*L*math.cos(mu*t)
+        y_2dot = -8*L*math.pow(mu,2)*math.sin(mu*t)*math.cos(mu*t)
+        print('ref_x=%f'%(ref_x))
+        print('ref_y=%f'%(ref_y))
+        print('t=%f'%(t))
         
         ref_w = (x_dot*y_2dot-x_2dot*y_dot)/(math.pow(x_dot,2)+math.pow(y_dot,2))
         ref_v = math.sqrt(math.pow(x_dot,2)+math.pow(y_dot,2))
